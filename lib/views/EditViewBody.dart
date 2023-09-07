@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:note_app/views/CustomeTextFiled.dart';
 import 'package:note_app/views/NoteBar.dart';
 
 class EditNoteViewBody extends StatelessWidget {
@@ -16,6 +17,11 @@ class EditNoteViewBody extends StatelessWidget {
             icon: Icons.check ,
             titel: 'Edit Note',
           ),
+          SizedBox( height: 50,),
+         CustomeTextFiled(hint: 'Title'),
+         SizedBox( height: 16,),
+         CustomeTextFiled(hint: 'Content',maxLines: 5,),
+
         ],
          
       ),
