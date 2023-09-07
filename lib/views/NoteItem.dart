@@ -16,7 +16,7 @@ class NoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
           ListTile(
-            title: Padding(
+            title: const Padding(
               padding: const EdgeInsets.only(bottom: 13),
               child: Text('Flutter Tips',
               style: TextStyle(color: Colors.black,fontSize: 26),
@@ -25,7 +25,7 @@ class NoteItem extends StatelessWidget {
             subtitle: Text('build your career with Ahmed Mohamed'
             ,style: TextStyle(color: Colors.black.withOpacity(0.4),fontSize: 17),
             ),
-            trailing: IconButton(icon: Icon(
+            trailing: IconButton(icon:const Icon(
               Icons.delete,color: Colors.black,
               size: 30,
             ),onPressed: () {
