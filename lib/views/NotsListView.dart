@@ -4,9 +4,7 @@ import 'NoteItem.dart';
 
 class NotesListView extends StatelessWidget {
   const NotesListView({super.key});
-  final data =const[
-    
-  ];
+  final data = const [];
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,8 +13,8 @@ class NotesListView extends StatelessWidget {
         padding: EdgeInsets.zero,
         itemBuilder: (context, index) {
           return const Padding(
-            padding:  EdgeInsets.symmetric(vertical: 4),
-            child:  NoteItem(),
+            padding: EdgeInsets.symmetric(vertical: 4),
+            child: NoteItem(),
           );
         },
       ),

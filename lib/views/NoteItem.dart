@@ -9,43 +9,47 @@ class NoteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const EditNoteView();
-        },));
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context) {
+            return const EditNoteView();
+          },
+        ));
       },
       child: Container(
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
-          color:const Color(0xffFFCC80),
+          color: const Color(0xffFFCC80),
           borderRadius: BorderRadius.circular(16),
-           ),
-           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-            ListTile(
-              title: const Padding(
-                padding: const EdgeInsets.only(bottom: 13),
-                child: Text('Flutter Tips',
-                style: TextStyle(color: Colors.black,fontSize: 26),
-                ),
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+          ListTile(
+            title: const Padding(
+              padding: const EdgeInsets.only(bottom: 13),
+              child: Text(
+                'Flutter Tips',
+                style: TextStyle(color: Colors.black, fontSize: 26),
               ),
-              subtitle: Text('build your career with Ahmed Mohamed'
-              ,style: TextStyle(color: Colors.black.withOpacity(0.4),fontSize: 17),
-              ),
-              trailing: IconButton(icon:const Icon(
-                Icons.delete,color: Colors.black,
+            ),
+            subtitle: Text(
+              'build your career with Ahmed Mohamed',
+              style:
+                  TextStyle(color: Colors.black.withOpacity(0.4), fontSize: 17),
+            ),
+            trailing: IconButton(
+              icon: const Icon(
+                Icons.delete,
+                color: Colors.black,
                 size: 30,
-              ),onPressed: () {
-                
-              },),
-            )
-           ,Text('May21 , 2022',
-           style: TextStyle(
-            color: Colors.black.withOpacity(0.4),
-            fontSize: 14
-           ),
-           )
-           ]),
+              ),
+              onPressed: () {},
+            ),
+          ),
+          Text(
+            'May21 , 2022',
+            style:
+                TextStyle(color: Colors.black.withOpacity(0.4), fontSize: 14),
+          )
+        ]),
       ),
     );
   }
