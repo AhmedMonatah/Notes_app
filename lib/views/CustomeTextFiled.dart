@@ -1,15 +1,26 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'Constatnts.dart';
 
 class CustomeTextFiled extends StatelessWidget {
-  const CustomeTextFiled({super.key, required this.hint, this.maxLines = 1});
+  const CustomeTextFiled({super.key, required this.hint, this.maxLines = 1, this.onSaved});
   final String hint;
   final int maxLines;
+  final void Function (String?)? onSaved;
+
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      
+      onSaved: onSaved,
+      validator: (value) {
+
+        if(value?.isEmpty?? true){
+          return 'Field is required';
+        }else{
+          return null;
+        }
+      },
       cursorColor: kprimaryColor,
       maxLines: maxLines,
       decoration: InputDecoration(
